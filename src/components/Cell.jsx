@@ -1,10 +1,6 @@
-import { useState } from 'react'
-
-function Cell() {
-	const [value, setValue] = useState(null)
-
+function Cell({ value, ...props }) {
 	return (
-		<div className={`cell ${value ? value : ''}`} onClick={() => setValue('x')} />
+		<div className={`cell ${value ? value : ''}`} {...props} />
 	)
 }
 
