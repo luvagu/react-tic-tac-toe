@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Cell({}) {
+function Cell() {
 	const [value, setValue] = useState(null)
 
 	return (

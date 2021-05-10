@@ -10,7 +10,7 @@ function Board({ index }) {
             <div>{status}</div>
             <main className="game-grid">
                 {boardCells.map((cell, index) => (
-                    <Cell key={index} value={index} />
+                    <Cell key={index} />
                 ))}
             </main>
         </Fragment>
