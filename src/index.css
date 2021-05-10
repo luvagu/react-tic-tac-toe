@@ -1,13 +1,147 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*, *::after, *::before {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --cell-size: 150px;
+    --mark-size: calc(var(--cell-size) * 0.9);
+}
+
+body {
+    margin: 0;
+    background-color: lightskyblue;
+}
+
+.game-grid {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+    border-bottom: none;
+}
+
+.cell.x,
+.cell.o {
+    cursor: not-allowed;
+}
+
+.cell.x::before,
+.cell.x::after {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+.cell.o::before {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.game-grid.x .cell:not(.x):not(.o):hover::before,
+.game-grid.x .cell:not(.x):not(.o):hover::after,
+.game-grid.o .cell:not(.x):not(.o):hover::before,
+.game-grid.o .cell:not(.x):not(.o):hover::after {
+    background-color: lightslategray;
+}
+
+.cell.x::before,
+.cell.x::after,
+.game-grid.x .cell:not(.x):not(.o):hover::before,
+.game-grid.x .cell:not(.x):not(.o):hover::after {
+    content: '';
+    width: calc(var(--mark-size) * 0.15);
+    height: var(--mark-size);
+    position: absolute;
+}
+
+.cell.x::before,
+.game-grid.x .cell:not(.x):not(.o):hover::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after,
+.game-grid.x .cell:not(.x):not(.o):hover::after {
+    transform: rotate(-45deg);
+}
+
+.cell.o::before,
+.cell.o::after,
+.game-grid.o .cell:not(.x):not(.o):hover::before,
+.game-grid.o .cell:not(.x):not(.o):hover::after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cell.o::before,
+.game-grid.o .cell:not(.x):not(.o):hover::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+}
+
+.cell.o::after,
+.game-grid.o .cell:not(.x):not(.o):hover::after {
+    width: calc(var(--mark-size) * 0.7);
+    height: calc(var(--mark-size) * 0.7);
+    background-color: lightskyblue;
+}
+
+.overlay-messages {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 140, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(1, 59, 59);
+    font-size: 5rem;
+}
+
+.overlay-messages button {
+    font-size: 3rem;
+    background-color: rgb(1, 59, 59);
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    padding: 0.25em 0.5em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.overlay-messages button:hover {
+    background-color: whitesmoke;
+    border: 1px solid rgb(1, 59, 59);
+    color: rgb(1, 59, 59);
 }
