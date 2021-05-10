@@ -4,7 +4,7 @@ import Cell from './Cell'
 function Board() {
 	const [cells, setCells] = useState(new Array(9).fill(null))
     const [currentPlayer, setCurrentPlayer] = useState('x')
-	const status = 'Next player: X'
+	const status = `Next player: ${currentPlayer.toUpperCase()}`
 
 	const handleClick = (index) => {
 		const newCells = [...cells]
@@ -17,7 +17,7 @@ function Board() {
 
 	return (
 		<Fragment>
-			<div>{status}</div>
+			<div className="">{status}</div>
 			<main className={`game-grid ${currentPlayer}`}>
 				{cells.map((value, index) => (
 					<Cell key={index} value={value} onClick={() => handleClick(index)} />
