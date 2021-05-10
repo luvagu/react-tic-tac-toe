@@ -1,9 +1,7 @@
-function App() {
-	return (
-    <main className="game-grid">
+import Board from './components/Board'
 
-    </main>
-  )
+function App() {
+	return <Board />
 }
 
 export default App
