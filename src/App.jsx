@@ -1,7 +1,9 @@
 function App() {
-  return (
-    ''
-  );
+	return (
+    <main className="game-grid">
+
+    </main>
+  )
 }
 
-export default App;
+export default App
