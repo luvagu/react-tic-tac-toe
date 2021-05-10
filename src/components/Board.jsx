@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import Cell from './Cell'
 
 function Board({ index }) {
@@ -5,11 +6,14 @@ function Board({ index }) {
 	const status = 'Next player: X'
 
 	return (
-		<main className="game-grid">
-			{boardCells.map((cell, index) => (
-				<Cell value={index} />
-			))}
-		</main>
+		<Fragment>
+            <div>{status}</div>
+            <main className="game-grid">
+                {boardCells.map((cell, index) => (
+                    <Cell key={index} value={index} />
+                ))}
+            </main>
+        </Fragment>
 	)
 }
 
