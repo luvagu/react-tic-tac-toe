@@ -1,4 +1,4 @@
-import Square from './Square'
+import Cell from './Cell'
 
 function Board({ index }) {
 	const boardCells = new Array(9).fill(null)
@@ -7,7 +7,7 @@ function Board({ index }) {
 	return (
 		<main className="game-grid">
 			{boardCells.map((cell, index) => (
-				<Square value={index} />
+				<Cell value={index} />
 			))}
 		</main>
 	)

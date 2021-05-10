@@ -1,4 +1,4 @@
-function Square({ value }) {
+function Cell({ value }) {
     return (
         <div className="cell">
             {value}
@@ -6,4 +6,4 @@ function Square({ value }) {
     )
 }
 
-export default Square
+export default Cell
