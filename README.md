@@ -5,7 +5,7 @@
   </a>
 </p>
 
-The old and beloved Tic-Tac-Toe of all time with handy extra features.
+The old and beloved Tic-Tac-Toe of all time with handy extra features. Built with React.
 
 ## Main Features
 
