@@ -50,7 +50,7 @@ function Game() {
 				currentPlayer={currentPlayer}
 				handleClick={handleClick}
 			/>
-            {winner && <Overlay message={status} close={() => setMoveNumber(0)} />}
+            {winner && <Overlay message={status} close={() => setHistory(0)} />}
 		</Fragment>
 	)
 }
