@@ -163,4 +163,5 @@ button {
 
 .overlay-messages button:hover {
     background-color: rgba(35, 65, 82, 0.75);
+    color: lightsteelblue;
 }
