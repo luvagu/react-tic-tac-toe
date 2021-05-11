@@ -10,7 +10,7 @@ function Game() {
     const [isSelectedMove, setIsSelectedMove] = useState(null)
     const [isClosed, setIsClosed] = useState(true)
 	const { cells } = history[moveNumber]
-	const winner = calculateWinner(cells)
+	const { winner, wCells } = calculateWinner(cells)
     const draw = checkDraw(cells)
     const player = isXTurn ? 'x' : 'o'
 
@@ -56,6 +56,7 @@ function Game() {
 			<Board
 				cells={cells}
 				player={player}
+				wCells={wCells}
 				handleClick={handleClick}
 			/>
 

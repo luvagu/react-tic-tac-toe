@@ -83,6 +83,10 @@ button {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+.cell.w {
+    background-color: rgba(71, 61, 139, 0.7);
+}
+
 .game-grid.x .cell:not(.x):not(.o):hover::before,
 .game-grid.x .cell:not(.x):not(.o):hover::after,
 .game-grid.o .cell:not(.x):not(.o):hover::before,
