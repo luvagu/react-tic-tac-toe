@@ -21,11 +21,17 @@ body {
     padding: 5px 10px;
 }
 
-button {
-    cursor: pointer;
+.floating-panel p {
+    font-size: 1.5;
+    font-weight: 600;
 }
 
-.selected {
+.floating-panel button {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.floating-panel button.selected {
     background-color: rgb(49, 170, 226);
 }
 
