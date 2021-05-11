@@ -10,11 +10,11 @@ The old and beloved Tic-Tac-Toe game of all time built with `React` and with han
 ## Main Features
 
 - Play `Tic-Tac-Toe`
-- Indicates when a player has `won` or there is a `draw`
+- Indicates when a player has `won` or if there is a `draw`
 - `Stores` the moves history during play
 - Allows players to go back to previous moves
-- Displays the location of each move as (`row, column`) in the move history
-- Player's winning cells are highlighted
+- Displays the location of each move as (`row, column`) in the move history line
+- Player's winning cells are highlighted uppon winning
 - X and O and hover events built entirely on CSS classes
 - Play against the computer (coming soon)
 
