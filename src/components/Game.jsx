@@ -45,7 +45,7 @@ function Game() {
 				<ol>
 					{history.map((step, move) => (
 						<li key={move}>
-							<button className={isSelectedMove === move ? 'boldText' : ''} onClick={() => goToMove(move)}>
+							<button className={isSelectedMove === move ? 'selected' : ''} onClick={() => goToMove(move)}>
 								{move ? `Go to move #${move}` : `Go to game start`}
 							</button>
 						</li>

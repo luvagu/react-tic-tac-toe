@@ -28,3 +28,7 @@ export const calculateWinner = (cells) => {
 }
 
 export const checkDraw = (cells) => cells.every((cell) => cell !== null)
+
+export const calculateMovePosition = (index) => {
+
+}

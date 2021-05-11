@@ -25,8 +25,8 @@ button {
     cursor: pointer;
 }
 
-.boldText {
-    font-weight: bold;
+.selected {
+    background-color: rgb(49, 170, 226);
 }
 
 .game-grid {
@@ -142,18 +142,18 @@ button {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(255, 140, 0, 0.9);
+    background-color: rgba(18, 27, 32, 0.95);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(1, 59, 59);
-    font-size: 2.5rem;
+    color: whitesmoke;
+    font-size: 3rem;
 }
 
 .overlay-messages button {
     font-size: 2rem;
-    background-color: rgb(1, 59, 59);
+    background-color: rgb(35, 65, 82);
     border: 1px solid whitesmoke;
     color: whitesmoke;
     padding: 0.25em 0.5em;
@@ -162,7 +162,5 @@ button {
 }
 
 .overlay-messages button:hover {
-    background-color: whitesmoke;
-    border: 1px solid rgb(1, 59, 59);
-    color: rgb(1, 59, 59);
+    background-color: rgba(35, 65, 82, 0.75);
 }
