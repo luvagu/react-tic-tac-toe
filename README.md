@@ -5,7 +5,7 @@
   </a>
 </p>
 
-The old and beloved Tic-Tac-Toe of all time with handy extra features. Built with React.
+The old and beloved Tic-Tac-Toe game of all time built with `React` and with handy extra features.
 
 ## Main Features
 
