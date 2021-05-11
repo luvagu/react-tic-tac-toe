@@ -5,15 +5,15 @@
   </a>
 </p>
 
-The old and beloved Tic-Tac-Toe of all time with handdy extra features.
+The old and beloved Tic-Tac-Toe of all time with handy extra features.
 
 ## Main Features
 
-- Play Tic-Tac-Toe
-- Indicates when a player has won or there is a draw
-- Stores the moves history during play
+- Play `Tic-Tac-Toe`
+- Indicates when a player has `won` or there is a `draw`
+- `Stores` the moves history during play
 - Allows players to go back to previous moves
-- Displays the location of each move as (row, column) in the move history
+- Displays the location of each move as (`row, column`) in the move history
 - Player's winning cells are highlighted
 - X and O and hover events built entirely on CSS classes
 - Play against the computer (coming soon)
