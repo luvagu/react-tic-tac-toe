@@ -1,8 +1,8 @@
 function Overlay({ message, close }) {
     return (
-        <div class="overlay-messages">
+        <div className="overlay-messages">
             <div>{message}</div>
-            <button onClick={close}>Restart Game</button>
+            <button onClick={close}>Close</button>
         </div>
     )
 }
