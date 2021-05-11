@@ -47,7 +47,7 @@ function Game() {
 					{history.map(({ cells, moveLocation }, move) => (
 						<li key={move}>
 							<button
-								className={isSelectedMove === move ? 'selected' : ''}
+								className={isSelectedMove === move && move > 0 ? 'selected' : ''}
 								onClick={() => goToMove(move)}
 							>
 								{move ? `Go to move #${move}` : `Go to game start`}
