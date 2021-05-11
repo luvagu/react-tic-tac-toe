@@ -14,7 +14,7 @@ The old and beloved Tic-Tac-Toe game of all time built with `React` and with han
 - `Stores` the moves history during play
 - Allows players to go back to previous moves
 - Displays the location of each move as (`row, column`) in the move history line
-- Player's winning cells are highlighted uppon winning
+- Player's winning cells are highlighted upon winning
 - X and O and hover events built entirely on CSS classes
 - Play against the computer (coming soon)
 
