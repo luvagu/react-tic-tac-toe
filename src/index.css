@@ -10,6 +10,23 @@
 body {
     margin: 0;
     background-color: lightskyblue;
+    position: relative;
+    font-family: monospace;
+}
+
+.floating-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.boldText {
+    font-weight: bold;
 }
 
 .game-grid {
