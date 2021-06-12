@@ -1,5 +1,5 @@
 export const calculateWinner = (cells) => {
-	const combinations = [
+	const winningCombinations = [
 		[0, 1, 2],
 		[3, 4, 5],
 		[6, 7, 8],
@@ -10,7 +10,7 @@ export const calculateWinner = (cells) => {
 		[2, 4, 6],
 	]
 
-	for (const combination of combinations) {
+	for (const combination of winningCombinations) {
 		const [a, b, c] = combination
 
 		if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
@@ -48,5 +48,6 @@ export const calculateMoveLocation = (moveNumber) => {
 		}
 		rowNum++
 	}
+	
 	return `pos: (${rowNum}, ${colNum})`
 }
